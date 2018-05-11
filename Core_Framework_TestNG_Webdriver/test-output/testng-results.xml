@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="My suite" duration-ms="0" started-at="2018-01-19T14:08:28Z" finished-at="2018-01-19T14:08:28Z">
+    <groups>
+    </groups>
+  </suite> <!-- My suite -->
+  <suite name="InpatientRegistration" duration-ms="22190" started-at="2018-01-19T14:08:05Z" finished-at="2018-01-19T14:08:28Z">
+    <groups>
+    </groups>
+    <test name="InpatientRegistration Test" duration-ms="22190" started-at="2018-01-19T14:08:05Z" finished-at="2018-01-19T14:08:28Z">
+      <class name="com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest">
+        <test-method status="PASS" signature="checkSuiteSkip()[pri:0, instance:com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest@204f30ec]" name="checkSuiteSkip" is-config="true" duration-ms="763" started-at="2018-01-19T19:38:05Z" finished-at="2018-01-19T19:38:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkSuiteSkip -->
+        <test-method status="PASS" signature="checkTestSkip()[pri:0, instance:com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest@204f30ec]" name="checkTestSkip" is-config="true" duration-ms="2" started-at="2018-01-19T19:38:05Z" finished-at="2018-01-19T19:38:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTestSkip -->
+        <test-method status="PASS" signature="OutpatientRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest@204f30ec]" name="OutpatientRegistration" duration-ms="12148" started-at="2018-01-19T19:38:05Z" data-provider="getTestData3" finished-at="2018-01-19T19:38:18Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[testing]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Samuel8]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Haag]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[samuel8.Haag@test.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[samuel8haag8]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[password1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[password1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[4702849234]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[4802992922]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Samuel77 Haag Inpatient INC]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[62863]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[AW3581243]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[PHAR933]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[4349 Indian school rd]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[suite 900]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[scottsdale]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Arizona]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[4802942949]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[Samuel8 Haag]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[12/10/2013]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OutpatientRegistration -->
+        <test-method status="PASS" signature="reportDataSetResult()[pri:0, instance:com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest@204f30ec]" name="reportDataSetResult" is-config="true" duration-ms="43" started-at="2018-01-19T19:38:18Z" finished-at="2018-01-19T19:38:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportDataSetResult -->
+        <test-method status="PASS" signature="OutpatientRegistration(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest@204f30ec]" name="OutpatientRegistration" duration-ms="9724" started-at="2018-01-19T19:38:18Z" data-provider="getTestData3" finished-at="2018-01-19T19:38:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[cognizant]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[cognizant]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Samuel8]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Haag]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[samuel8.Haag@test.com]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[samuel8haag8]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[password1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[password1]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[4702849234]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[4802992922]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Samuel77 Haag Inpatient INC]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[62863]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[AW3581243]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[PHAR933]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[4349 Indian school rd]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[suite 900]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[scottsdale]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[Arizona]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[4802942949]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[Samuel8 Haag]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[12/10/2013]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OutpatientRegistration -->
+        <test-method status="PASS" signature="reportDataSetResult()[pri:0, instance:com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest@204f30ec]" name="reportDataSetResult" is-config="true" duration-ms="40" started-at="2018-01-19T19:38:27Z" finished-at="2018-01-19T19:38:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportDataSetResult -->
+        <test-method status="PASS" signature="reportTestResult()[pri:0, instance:com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest@204f30ec]" name="reportTestResult" is-config="true" duration-ms="204" started-at="2018-01-19T19:38:27Z" finished-at="2018-01-19T19:38:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportTestResult -->
+      </class> <!-- com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest -->
+    </test> <!-- InpatientRegistration Test -->
+  </suite> <!-- InpatientRegistration -->
+</testng-results>

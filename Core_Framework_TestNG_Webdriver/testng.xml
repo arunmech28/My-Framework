@@ -1,0 +1,11 @@
+<suite name="My suite">
+<listeners>
+    <listener class-name="com.mckesson.listener.TestsListenerAdapter" />
+</listeners>
+  <suite-files>
+   <suite-file path="./InpatientRegistration Suite.xml" />
+   <!-- <suite-file path="./PrescriberRegistration Suite.xml" />-->
+   <!-- <suite-file path="./OutpatientRegistration Suite.xml" />-->
+   
+  </suite-files>
+</suite>

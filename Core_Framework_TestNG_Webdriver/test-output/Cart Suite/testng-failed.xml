@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Cart Suite]">
+  <listeners>
+    <listener class-name="com.mckesson.listener.TestsListenerAdapter"/>
+  </listeners>
+  <test name="CheckTotal Test(failed)">
+    <classes>
+      <class name="com.mckesson.suite.cart.CheckTotal">
+        <methods>
+          <include name="reportDataSetResult"/>
+          <include name="checkTestSkip"/>
+          <include name="testcaseCartTotal"/>
+          <include name="reportTestResult"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.cart.CheckTotal -->
+      <class name="com.mckesson.suite.cart.TestCase_B2">
+        <methods>
+          <include name="checkSuiteSkip"/>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.cart.TestCase_B2 -->
+    </classes>
+  </test> <!-- CheckTotal Test(failed) -->
+</suite> <!-- Failed suite [Cart Suite] -->

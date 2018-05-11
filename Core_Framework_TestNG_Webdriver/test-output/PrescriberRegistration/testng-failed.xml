@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [PrescriberRegistration]">
+  <listeners>
+    <listener class-name="com.mckesson.listener.TestsListenerAdapter"/>
+  </listeners>
+  <test name="PrescriberRegistration Test(failed)">
+    <classes>
+      <class name="com.mckesson.suite.PrescriberRegistration.PrescriberRegistrationTest">
+        <methods>
+          <include name="checkTestSkip"/>
+          <include name="getTestData2"/>
+          <include name="checkSuiteSkip"/>
+          <include name="reportDataSetResult"/>
+          <include name="reportTestResult"/>
+          <include name="testRegistration" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.PrescriberRegistration.PrescriberRegistrationTest -->
+    </classes>
+  </test> <!-- PrescriberRegistration Test(failed) -->
+</suite> <!-- Failed suite [PrescriberRegistration] -->

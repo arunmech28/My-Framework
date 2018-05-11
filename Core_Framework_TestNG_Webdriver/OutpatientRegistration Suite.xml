@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OutpatientRegistration">
+
+
+
+<test name="OutpatientRegistration Test">
+    <classes>
+        <class name="com.mckesson.suite.OutpatientRegistration.OutpatientRegistrationTest" ></class>  
+    </classes>
+</test>
+
+</suite>
+

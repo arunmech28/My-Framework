@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Shop Suite]">
+  <listeners>
+    <listener class-name="com.mckesson.listener.TestsListenerAdapter"/>
+  </listeners>
+  <test name="AddProduct Test(failed)">
+    <classes>
+      <class name="com.mckesson.suite.shop.CheckProductDisplay">
+        <methods>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.shop.CheckProductDisplay -->
+      <class name="com.mckesson.suite.shop.AddProductTest">
+        <methods>
+          <include name="checkTestSkip"/>
+          <include name="addProductToBasket"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.shop.AddProductTest -->
+      <class name="com.mckesson.suite.shop.RandomSelection">
+        <methods>
+          <include name="checkSuiteSkip"/>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.shop.RandomSelection -->
+    </classes>
+  </test> <!-- AddProduct Test(failed) -->
+  <test name="CheckProduct Display(failed)">
+    <classes>
+      <class name="com.mckesson.suite.shop.CheckProductDisplay">
+        <methods>
+          <include name="testcaseA1"/>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.shop.CheckProductDisplay -->
+      <class name="com.mckesson.suite.shop.AddProductTest">
+        <methods>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.shop.AddProductTest -->
+      <class name="com.mckesson.suite.shop.RandomSelection">
+        <methods>
+          <include name="checkSuiteSkip"/>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.shop.RandomSelection -->
+    </classes>
+  </test> <!-- CheckProduct Display(failed) -->
+  <test name="Random Product selection test(failed)">
+    <classes>
+      <class name="com.mckesson.suite.shop.CheckProductDisplay">
+        <methods>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.shop.CheckProductDisplay -->
+      <class name="com.mckesson.suite.shop.AddProductTest">
+        <methods>
+          <include name="checkTestSkip"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.shop.AddProductTest -->
+      <class name="com.mckesson.suite.shop.RandomSelection">
+        <methods>
+          <include name="checkSuiteSkip"/>
+          <include name="checkTestSkip"/>
+          <include name="testSelection"/>
+        </methods>
+      </class> <!-- com.mckesson.suite.shop.RandomSelection -->
+    </classes>
+  </test> <!-- Random Product selection test(failed) -->
+</suite> <!-- Failed suite [Shop Suite] -->

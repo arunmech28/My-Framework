@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="InpatientRegistration" parallel="tests" data-provider-thread-count="20" verbose="1">
+
+
+
+<test name="InpatientRegistration Test">
+    <classes>
+        <class name="com.mckesson.suite.InpatientRegistration.InpatientRegistrationTest" ></class>  
+    </classes>
+</test>
+
+</suite>
+

@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="PrescriberRegistration">
+
+
+
+<test name="PrescriberRegistration Test">
+    <classes>
+        <class name="com.mckesson.suite.PrescriberRegistration.PrescriberRegistrationTest" ></class>  
+    </classes>
+</test>
+
+</suite>
+
