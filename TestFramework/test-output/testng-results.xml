@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="3" total="4" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="7366" started-at="2018-05-08T05:21:39Z" finished-at="2018-05-08T05:21:46Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="7366" started-at="2018-05-08T05:21:39Z" finished-at="2018-05-08T05:21:46Z">
+      <class name="Application.Suite.AutomationTestSuite">
+        <test-method status="PASS" signature="setup()[pri:0, instance:Application.Suite.AutomationTestSuite@4b9e13df]" name="setup" is-config="true" duration-ms="13" started-at="2018-05-08T10:51:39Z" finished-at="2018-05-08T10:51:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="driverstartup(java.lang.reflect.Method)[pri:0, instance:Application.Suite.AutomationTestSuite@4b9e13df]" name="driverstartup" is-config="true" duration-ms="7323" started-at="2018-05-08T10:51:39Z" finished-at="2018-05-08T10:51:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Application.Suite.AutomationTestSuite.Test_Case_1(java.lang.String[]) throws java.lang.ClassNotFoundException,java.lang.InstantiationException,java.lang.IllegalAccessException,java.lang.IllegalArgumentException,java.lang.reflect.InvocationTargetException,java.lang.NoSuchMethodException,java.lang.SecurityException,java.io.FileNotFoundException,java.io.IOException,org.json.simple.parser.ParseException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverstartup -->
+        <test-method status="FAIL" signature="Test_Case_1([Ljava.lang.String;)[pri:0, instance:Application.Suite.AutomationTestSuite@4b9e13df]" name="Test_Case_1" duration-ms="9" started-at="2018-05-08T10:51:46Z" data-provider="test_Data" finished-at="2018-05-08T10:51:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@3c0f93f1]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.reflect.InvocationTargetException">
+            <full-stacktrace>
+              <![CDATA[java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at Framework.Handler.Runner.execute(Runner.java:57)
+	at Framework.Handler.TestBaseWebAutomation.startExecution(TestBaseWebAutomation.java:51)
+	at Application.Suite.AutomationTestSuite.Test_Case_1(AutomationTestSuite.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 0
+	at Framework.Utilities.ReusableLibrary.justTest(ReusableLibrary.java:45)
+	at AutomationTestSuite.keywords.Test_Case_1_Keywords.run(Test_Case_1_Keywords.java:29)
+	... 20 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.reflect.InvocationTargetException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Case_1 -->
+      </class> <!-- Application.Suite.AutomationTestSuite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

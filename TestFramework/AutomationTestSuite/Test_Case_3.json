@@ -1,0 +1,19 @@
+[
+{  
+        "username":"hcpuser805",
+        "password":"Password1$",
+        "RequestService":"Claim Denial Assistance",
+        "firstName":"arun",
+        "lastName":"pandian",
+        "gender":"Male",
+        "address1":"12,andohofho",
+       	"city":"Coopersburg",
+        "state":"Pennyslvania",
+        "zipcode":"18036",
+        "patientDOB":"11281993",
+        "homephone":"4643131346",
+        "workphone":"1564613464",
+        "cellphone":"1314463436",
+        "timetocontact":"Morning"
+  }
+]

@@ -1,0 +1,31 @@
+[
+{  
+        "username":"hcpuser805",
+        "password":"Password1$",
+        "RequestService":"Claim Denial Assistance",
+        "firstName":"arun",
+        "lastName":"pandian",
+        "gender":"Male",
+        "address1":"12,andohofho",
+       	"city":"Coopersburg",
+        "state":"Pennsylvania",
+        "zipcode":"18036",
+        "patientDOB":"11281993",
+        "homePhone":"4643131346",
+        "workPhone":"1564613464",
+        "cellPhone":"1314463436",
+        "timetocontact":"Morning",
+       	"primaryInsuranceName":"sghfh",
+        "cardHolderName":"sdkfkgb",
+        "cardHolderRelation":"sgdksgg",
+        "insuranceCompanyPhone":"6464664646",
+        "policyNumber":"14646",
+        "groupNumber":"64646",
+        "practiceLocation":"Physio",
+        "healthCareProvider":"Xavier, George",
+        "providerSignature":"George Xavier",
+        "signatureDate":"04252018",
+        "attach":"Prescription"
+        
+}
+]
