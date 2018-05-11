@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>CARFTLite.SupportLibraries</name>
+  </assembly>
+  <members>
+    <member name="T:CRAFTLite.SupportLibraries.CraftLiteException">
+      <summary>
+            Custom exception class to customize exception messages
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.CraftLiteException.#ctor(System.String)">
+      <summary>
+            Constructor to initialize the exception from the framework	 
+            </summary>
+      <param name="message">The Exception message to be thrown</param>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.DataAccess">
+      <summary>
+            Class which defines members and methods which can be used for data access
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.DataAccess.#ctor(System.String,System.String)">
+      <summary>
+            Constructor to initialize the database path and filename	 
+            </summary>
+      <param name="databasePath">The absolute path where the database is stored</param>
+      <param name="databaseName">The filename of the database</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.DataAccess.Connect">
+      <summary>
+            Function to open a connection to the datatable
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.DataAccess.Disconnect">
+      <summary>
+            Function to close the connection to the datatable
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.DataAccess.ExecuteNonQuery(System.Data.OleDb.OleDbCommand)">
+      <summary>
+            Function to execute an insert/update query against the datatable	
+            </summary>
+      <param name="command">The insert/update command to be executed</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.DataAccess.ExecuteQuery(System.Data.OleDb.OleDbCommand)">
+      <summary>
+            Function to execute a select query against the datatable	 
+            </summary>
+      <param name="command">The command to be executed</param>
+      <returns>The data output from the query</returns>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.DataTables">
+      <summary>
+            Class which encapsulates members and methods which are used to retrieve data for test cases
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.DataTables.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:CRAFTLite.SupportLibraries.DataTables" /> class</summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.DataTables.CurrentIteration">
+      <summary>
+            Property to set the Current Iteration
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.DataTables.CurrentTestcase">
+      <summary>
+            Property to set the Current Testcase
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.DataTables.DataTableName">
+      <summary>
+            Property to set the datatable name
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.DataTables.DataTablePath">
+      <summary>
+            Property to set the datatable path
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.DataTables.GetData(System.String)">
+      <summary>
+            Function to return the test data value corresponding to the field name passed
+            </summary>
+      <param name="fieldName">The name of the field whose value is required</param>
+      <returns>The test data present in the field name specified</returns>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.DataTables.GetExpectedResult(System.String)">
+      <summary>
+            Function to get the expected result corresponding to the field name passed
+            </summary>
+      <param name="fieldName">The name of the field which contains the expected results</param>
+      <returns>The expected result present in the field name specified</returns>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.DataTables.PutData(System.String,System.String)">
+      <summary>
+            Function to output intermediate data (output values)  into the Test data sheet
+            </summary>
+      <param name="fieldName">The name of the field into which the data is to be written</param>
+      <param name="fieldValue">The value to be written into the field specified</param>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.ExcelReport">
+      <summary>
+            Class to encapsulate the Excel report generation functions of the CRAFT framework
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.ExcelReport.#ctor(System.String,System.String)">
+      <summary>
+            Constructor to initialize the Excel report path and name
+            </summary>
+      <param name="reportPath">The absolute path of the results folder</param>
+      <param name="reportName">The name of the report</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.ExcelReport.CreateIterationHeader(System.Int32)">
+      <summary>
+            Method to create iteration header for the test case in Excel format
+            </summary>
+      <param name="currentIteration">Current Iteration number</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.ExcelReport.CreateResultSummaryFooter(System.String,System.Int32,System.Int32)">
+      <summary>
+            Method to create the result summart footer in Excel format
+            </summary>
+      <param name="totalExecutionTime">Total Execution time taken for the test case</param>
+      <param name="nTestsPassed">Number of steps passed for the test case</param>
+      <param name="nTestsFailed">Number of steps failed for the test case</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.ExcelReport.CreateResultSummaryHeader">
+      <summary>
+            Method to create the result summart header in Excel format
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.ExcelReport.CreateTestLogFooter(System.String,System.Int32,System.Int32)">
+      <summary>
+            Method to create the Test Log footer in Excel format
+            </summary>
+      <param name="executionTime">Execution time taken for the test case</param>
+      <param name="nStepsPassed">Number of steps passed</param>
+      <param name="nStepsFailed">Number of steps failed</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.ExcelReport.CreateTestLogHeader(System.String,System.String,System.Int32,System.Int32)">
+      <summary>
+            Method to create the test log header in Excel sheet
+            </summary>
+      <param name="reportName">Name of the report</param>
+      <param name="iterationMode">Iteration mode of the test case</param>
+      <param name="startIteration">Start Iteration of the test case</param>
+      <param name="endIteration">End Iteration of the test case</param>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.ExcelReport.resultSummaryPath">
+      <summary>
+            The absolute path where the summary results should be stored
+            </summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.ExcelReport.testLogPath">
+      <summary>
+            The absolute path where the test case results should be stored
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.ExcelReport.UpdateResultSummary(System.String,System.String,System.String,System.String)">
+      <summary>
+            Method to update the result summart in Excel format
+            </summary>
+      <param name="testcaseName">Name of the test case</param>
+      <param name="testcaseDescription">Description of the test case</param>
+      <param name="executionTime">Execution time taken by the test case</param>
+      <param name="testStatus">Test status of the test case</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.ExcelReport.UpdateTestLog(System.String,System.String,System.String,CRAFTLite.SupportLibraries.Report.Status,System.String)">
+      <summary>
+            Method to update the test log details in the excelt report
+            </summary>
+      <param name="stepNumber">The Step Number of the test case</param>
+      <param name="stepName">The Step Name of the test case</param>
+      <param name="stepDescription">The Step Description of the test case</param>
+      <param name="stepStatus">The Step Status of the test case</param>
+      <param name="screenShotName">The Screenshort name to be given for the test case</param>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.ExcelReport.util">
+      <summary>
+            The Util object
+            </summary>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.GlobalSettings">
+      <summary>
+            Singleton class which encapsulates all generic members used across the framework and gets the value for the members from the ini file
+            </summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.GlobalSettings._stopExecution">
+      <summary>
+            Stop Execution flag
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.Browser">
+      <summary>
+            Browser to be used for testing from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.CheckpointSheet">
+      <summary>
+            Name of the check point sheet from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.DataReferenceIdentifier">
+      <summary>
+            Data Reference Identifier value from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.DateFormatString">
+      <summary>
+            Default Date format string
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.DebugMode">
+      <summary>
+            Debug Mode from ini file
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.GlobalSettings.GetConfig(System.String)">
+      <summary>
+            Function to get the configuration data from the Craft.ini configuration file
+            </summary>
+      <param name="key">The key whose value is being searched for</param>
+      <returns>The value corresponding to the key searched for</returns>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.Host">
+      <summary>
+            Host Name from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.Instance">
+      <summary>
+            Method to create/get the instance of the class GlobalSettings
+            </summary>
+      <returns>GlobalSettings object</returns>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.NumberofThreads">
+      <summary>
+            Number of threads for test case execution from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.OnError">
+      <summary>
+            On Error value from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.Port">
+      <summary>
+            Port number to be used for testing from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.ProjectName">
+      <summary>
+            Project Name from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.RelativePath">
+      <summary>
+            Relative path for creating results of the test case execution
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.ReportTheme">
+      <summary>
+            Report Theme to be used from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.StopExecution">
+      <summary>
+            Public property for _stopExecution flag
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.TakeScreenshotFailedStep">
+      <summary>
+            Boolean value to set whether to take Screen Shot for the failed step from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.TakeScreenshotPassedStep">
+      <summary>
+            Boolean value to set whether to take Screen Shot for the passed step from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.TestDataSheet">
+      <summary>
+            Name of the Test Data Sheet from ini file
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.GlobalSettings.Url">
+      <summary>
+            URL for testing from ini file
+            </summary>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.HtmlReport">
+      <summary>
+            Class to encapsulate the HTML report generation functions of the CRAFT framework
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.HtmlReport.#ctor(System.String,System.String,CRAFTLite.SupportLibraries.Util)">
+      <summary>
+            Constructor to initialize the HTML report path and name
+            </summary>
+      <param name="reportPath">The absolute path of the results folder</param>
+      <param name="reportName">The name of the report</param>
+      <param name="util">The Util object from allocator or testscript</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.HtmlReport.CreateIterationHeader(System.Int32)">
+      <summary>
+            Method to create the iteration header in HTML format
+            </summary>
+      <param name="currentIteration">Current Iteration value</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.HtmlReport.CreateResultSummaryFooter(System.String,System.Int32,System.Int32)">
+      <summary>
+            Method to creat the result summary footer in HTML format
+            </summary>
+      <param name="totalExecutionTime">Total Time taken for execution of all test cases</param>
+      <param name="nTestsPassed">Number of steps passed</param>
+      <param name="nTestsFailed">Number of steps failed</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.HtmlReport.CreateResultSummaryHeader">
+      <summary>
+            Method to create result summary header in HTML format
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.HtmlReport.CreateTestLogFooter(System.String,System.Int32,System.Int32)">
+      <summary>
+            Method to create the test log footer in HTML format
+            </summary>
+      <param name="executionTime">Time taken for execution of the test case</param>
+      <param name="nStepsPassed">Number of steps passed</param>
+      <param name="nStepsFailed">Number of steps failed</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.HtmlReport.CreateTestLogHeader(System.String,System.String,System.Int32,System.Int32)">
+      <summary>
+            Method to create test log header in HTML format
+            </summary>
+      <param name="reportName">Name of the report</param>
+      <param name="iterationMode">Iteration mode of the test case</param>
+      <param name="startIteration">Start Iteration value of the test case</param>
+      <param name="endIteration">End Iteration value of the test case</param>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.HtmlReport.resultSummaryPath">
+      <summary>
+            The absolute path where the summary results should be stored
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.HtmlReport.SetReportsTheme">
+      <summary>
+            Function to set the color theme of the results
+            </summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.HtmlReport.testLogPath">
+      <summary>
+            The absolute path where the test case results should be stored
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.HtmlReport.UpdateResultSummary(System.String,System.String,System.String,System.String)">
+      <summary>
+            Method to update the result summary in HTML format
+            </summary>
+      <param name="testcaseName">Name of the test case</param>
+      <param name="testcaseDescription">Description of the test case</param>
+      <param name="executionTime">Execution time taken by the test case</param>
+      <param name="testStatus">Test Status of the test case</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.HtmlReport.UpdateTestLog(System.String,System.String,System.String,CRAFTLite.SupportLibraries.Report.Status,System.String)">
+      <summary>
+            Method to update the test log of each test case
+            </summary>
+      <param name="stepNumber">The Step Number of the test case</param>
+      <param name="stepName">The Step Name of the test case</param>
+      <param name="stepDescription">The Step Description of the test case</param>
+      <param name="stepStatus">The Step Status of the test case</param>
+      <param name="screenShotName">The Screen Shot name for the test case</param>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.IReportType">
+      <summary>
+            Interface defined various types of reports and their methods
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.IReportType.CreateIterationHeader(System.Int32)">
+      <summary>
+            Function to add a header representing the beginning of an iteration
+            </summary>
+      <param name="currentIteration">The current iteration number being executed</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.IReportType.CreateResultSummaryFooter(System.String,System.Int32,System.Int32)">
+      <summary>
+            Function to create a footer to close the results summary
+            </summary>
+      <param name="totalExecutionTime">The total time taken to execute all the test cases</param>
+      <param name="nTestsPassed">The number of test cases that passed</param>
+      <param name="nTestsFailed">The number of test cases that failed</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.IReportType.CreateResultSummaryHeader">
+      <summary>
+            Function to create the Result Summary file and initialize the header
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.IReportType.CreateTestLogFooter(System.String,System.Int32,System.Int32)">
+      <summary>
+            Function to create a footer to close the test log
+            </summary>
+      <param name="executionTime">The time taken to execute the test case</param>
+      <param name="nStepsPassed">The number of test steps that passed</param>
+      <param name="nStepsFailed">The number of test steps that failed </param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.IReportType.CreateTestLogHeader(System.String,System.String,System.Int32,System.Int32)">
+      <summary>
+            Function to create the Test log file and initialize the header
+            </summary>
+      <param name="reportName">The name of the report</param>
+      <param name="iterationMode">The iteration mode configured by the user</param>
+      <param name="startIteration">The start iteration configured by the user</param>
+      <param name="endIteration">The end iteration configured by the user</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.IReportType.UpdateResultSummary(System.String,System.String,System.String,System.String)">
+      <summary>
+            Function to update the results summary with the status of the executed test case
+            </summary>
+      <param name="testcaseName">The name of the test case</param>
+      <param name="testcaseDescription">The description of the test case</param>
+      <param name="executionTime">The time taken to execute the test case</param>
+      <param name="testStatus">The execution status of the test case</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.IReportType.UpdateTestLog(System.String,System.String,System.String,CRAFTLite.SupportLibraries.Report.Status,System.String)">
+      <summary>
+            Function to update the test log with the message passed by the user
+            </summary>
+      <param name="stepNumber">The current step number</param>
+      <param name="stepName">The test step name</param>
+      <param name="stepDescription">The description of what the test step does</param>
+      <param name="stepStatus">The status of the test step</param>
+      <param name="screenshotName">The filename of the screenshot file (in case of failed step)</param>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.Report">
+      <summary>
+            Class which defines methods for generating different reports in various formats
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Report.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:CRAFTLite.SupportLibraries.Report" /> class</summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Report.CreateIterationHeader(System.Int32)">
+      <summary>
+            Function to add headers representing the beginning of an iteration
+            </summary>
+      <param name="currentIteration">The current iteration number being executed</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Report.CreateResultSummaryFooter(System.String)">
+      <summary>
+            Function to create footers to close the results summary files
+            </summary>
+      <param name="totalExecutionTime">The total time taken for executing the test case</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Report.CreateResultSummaryHeader">
+      <summary>
+            Function to create the Result Summary files and initialize the headers
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Report.CreateTestLogFooter(System.String)">
+      <summary>
+            Function to create footers to close the test log files
+            </summary>
+      <param name="executionTime">The time taken to execute the test case</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Report.CreateTestLogHeader(System.String,System.Int32,System.Int32)">
+      <summary>
+            Function to create the Test log files and initialize the headers
+            </summary>
+      <param name="iterationMode">Iteration Mode value from Run Manager</param>
+      <param name="startIteration">Start Iteration value from Run Manager</param>
+      <param name="endIteration">End Iteration value from Run Manager</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Report.Initialize(CRAFTLite.SupportLibraries.Util)">
+      <summary>
+            Function to inilialize the different types of reports
+            </summary>
+      <param name="util">Util object from Allocator or Testscript</param>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.Report.ReportName">
+      <summary>
+            Property to set the report path
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.Report.ReportPath">
+      <summary>
+            Property to set the report path
+            </summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.Report.testStatus">
+      <summary>
+            The status of the test being executed
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Report.UpdateResultSummary(System.String,System.String,System.String,System.String)">
+      <summary>
+            Function to update the results summary with the status of the executed test case
+            </summary>
+      <param name="testcaseName">The name of the test case</param>
+      <param name="testcaseDescription">The description of the test case</param>
+      <param name="executionTime">The time taken to execute the test case</param>
+      <param name="testStatus">The Pass/Fail status of the test case</param>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Report.UpdateTestLog(System.String,System.String,CRAFTLite.SupportLibraries.Report.Status)">
+      <summary>
+            Function to update the test log with the details of a particular test step
+            </summary>
+      <param name="stepName">The test step name</param>
+      <param name="stepDescription">The description of what the test step does</param>
+      <param name="stepStatus">The status of the test step</param>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.Report.Status">
+      <summary>
+            Enumeration to represent the status of the current test step
+            </summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.Report.Status.PASS">
+      <summary>
+            Indicates that the outcome of a verification was successful
+            </summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.Report.Status.FAIL">
+      <summary>
+            Indicates that the outcome of a verification was not successful
+            </summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.Report.Status.WARNING">
+      <summary>
+            Indicates a warning message
+            </summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.Report.Status.DONE">
+      <summary>
+            Indicates a message that is logged into the results for informational purposes
+            </summary>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.ScriptHelper">
+      <summary>
+            Class which provides instances of various classes like DataTable, Report and Util which are used in creating business components
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.ScriptHelper.#ctor(CRAFTLite.SupportLibraries.DataTables,CRAFTLite.SupportLibraries.Report,CRAFTLite.SupportLibraries.Util)">
+      <summary>
+            Constructor to initialize all the objects wrapped by the ScriptHelper class
+            </summary>
+      <param name="dataTable">The DataTable object</param>
+      <param name="report">The Report object</param>
+      <param name="util">The Util object</param>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.ScriptHelper.DataTableObj">
+      <summary>
+            Property to get the DataTable object of the ScriptHelper class
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.ScriptHelper.ReportObj">
+      <summary>
+            Property to get the Report object of the ScriptHelper class
+            </summary>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.ScriptHelper.UtilObj">
+      <summary>
+            Property to get the Util object of the ScriptHelper class
+            </summary>
+    </member>
+    <member name="T:CRAFTLite.SupportLibraries.Util">
+      <summary>
+            Class which defines general utility methods which can be used across the framework
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Util.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:CRAFTLite.SupportLibraries.Util" /> class</summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.Util.exitIteration">
+      <summary>
+            Boolean variable to indicate whether the current test iteration should be aborted
+            </summary>
+    </member>
+    <member name="F:CRAFTLite.SupportLibraries.Util.exitTestcase">
+      <summary>
+            Boolean variable to indicate whether the current test case should be aborted
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Util.GetCurrentFormattedTime">
+      <summary>
+            Function to return the current time, formatted as per the dataFormatString setting
+            </summary>
+      <returns>The current time, formatted as per the dataFormatString setting</returns>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Util.GetCurrentTime">
+      <summary>
+            Function to return the current time
+            </summary>
+      <returns>The current time</returns>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Util.GetFormattedTime(System.DateTime)">
+      <summary>
+            Function to format the given time variable as specified by the dateFormatString setting
+            </summary>
+      <param name="time">The time variable to be formatted</param>
+      <returns>The formatted string corresponding to the given time</returns>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Util.GetTimeDifference(System.DateTime,System.DateTime)">
+      <summary>
+            Function to get the time difference between 2 Date variables in minutes/seconds format
+            </summary>
+      <param name="startTime">startTime</param>
+      <param name="endTime">startTime</param>
+      <returns>Time difference in minues/seconds format</returns>
+    </member>
+    <member name="P:CRAFTLite.SupportLibraries.Util.RelativePath">
+      <summary>
+            Relative path for creating results of the test case execution
+            </summary>
+    </member>
+    <member name="M:CRAFTLite.SupportLibraries.Util.TakeScreenshot(System.String)">
+      <summary>
+            Function to take a screenshot and store in the specified path
+            </summary>
+      <param name="screenshotPath">Absolute path of the folder where the screenshot is to be saved</param>
+    </member>
+  </members>
+</doc>

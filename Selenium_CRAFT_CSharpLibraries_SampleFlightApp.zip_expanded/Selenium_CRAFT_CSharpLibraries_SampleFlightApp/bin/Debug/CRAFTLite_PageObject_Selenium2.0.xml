@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CRAFTLite_PageObject_Selenium2.0</name>
+    </assembly>
+    <members>
+        <member name="T:CRAFTLite.SupportLibraries.ReusableLibrary">
+            <summary>
+            Abstract base class for reusable libraries created by the user
+            </summary>
+        </member>
+        <member name="F:CRAFTLite.SupportLibraries.ReusableLibrary.ScriptHelper">
+            <summary>
+            The ScriptHelper object (required for calling one reusable library from another)
+            </summary>
+        </member>
+        <member name="F:CRAFTLite.SupportLibraries.ReusableLibrary.Driver">
+            <summary>
+            The Webdriver object
+            </summary>
+        </member>
+        <member name="F:CRAFTLite.SupportLibraries.ReusableLibrary.DataTable">
+            <summary>
+            The craftLite DataTable object (passed from the main test script)
+            </summary>
+        </member>
+        <member name="F:CRAFTLite.SupportLibraries.ReusableLibrary.Report">
+            <summary>
+            The SeleniumReport object (passed from the test script)
+            </summary>
+        </member>
+        <member name="F:CRAFTLite.SupportLibraries.ReusableLibrary.FrameworkParameters">
+            <summary>
+            The FrameworkParameters object
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.ReusableLibrary.#ctor(CRAFTLite.SupportLibraries.ScriptHelper)">
+            <summary>
+            Constructor to initialize the ScriptHelper object and in turn the objects wrapped by it
+            </summary>
+            <param name="scriptHelper">The ScriptHelper object</param>
+        </member>
+        <member name="T:CRAFTLite.FunctionalLibraries.Template">
+            <summary>
+             Functional library template
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.FunctionalLibraries.Template.#ctor(CRAFTLite.SupportLibraries.ScriptHelper)">
+            <summary>
+             Constructor to initialize the functional library
+            </summary>
+            <param name="scriptHelper">The ScriptHelper object passed from the TestScript</param>
+        </member>
+        <member name="T:CRAFTLite.SupportLibraries.TestScript">
+            <summary>
+            Abstract base class for test scripts created by the user (Encapsulates the core logic of the CRAFTLite framework) 
+            </summary>
+        </member>
+        <member name="F:CRAFTLite.SupportLibraries.TestScript.TestParameters">
+            <summary>
+            The TestParameters object
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.TestScript.#ctor">
+            <summary>
+             Constructor to initialize the DriverScript
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.TestScript.SetDefaultTestParameters">
+            <summary>
+            Function which implements the test case to be automated
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.TestScript.DriveTestExecution">
+            <summary>
+             Function to execute the given test case
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.TestScript.ExecuteTestCase">
+            <summary>
+            Function which implements the test case to be automated
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.TestScript.ExecuteTestIterations">
+            <summary>
+            Function to do required setup activities before starting the test execution
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.TestScript.TearDown">
+            <summary>
+             Function to do required teardown activities at the end of the test execution
+            </summary>
+        </member>
+        <member name="T:CRAFT.Allocator.Allocator">
+            <summary>
+            Class to manage the batch execution of test scripts within the framework
+            </summary>
+        </member>
+        <member name="T:CRAFTLite_DotNet.NamespaceDoc">
+            <summary>
+            CRAFTLite_DotNet Namespace which contains classes for executing test cases individually or in batch
+            </summary>
+        </member>
+        <member name="T:CRAFTLite.SupportLibraries.SeleniumReport">
+            <summary>
+             Class to extend the reporting features of the framework
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.SeleniumReport.#ctor(Framework_Reporting.ReportSettings,Framework_Reporting.ReportTheme)">
+             <summary>
+            Constructor to initialize the Report
+             </summary>
+             <param name="reportSettings">The ReportSettings object</param>
+             <param name="reportTheme">The ReportTheme object</param>
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.SeleniumReport.Driver">
+            <summary>
+            The WebDriver object
+            </summary>
+        </member>
+        <member name="T:CRAFTLite.FunctionalLibraries.FunctionalLibrary">
+            <summary>
+            Functional Library class
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.FunctionalLibraries.FunctionalLibrary.#ctor(CRAFTLite.SupportLibraries.ScriptHelper)">
+            <summary>
+             Constructor to initialize the functional library
+            </summary>
+            <param name="scriptHelper">The  ScriptHelper object passed from the  TestScript</param>
+        </member>
+        <member name="T:CRAFTLite.SupportLibraries.TimeStamp">
+            <summary>
+            Singleton class which manages the creation of timestamped result folders for every test batch execution
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.TimeStamp.getInstance">
+            <summary>
+            Function to return the timestamped result folder path
+            </summary>
+            <returns>The timestamped result folder path</returns>
+        </member>
+        <member name="T:CRAFTLite.SupportLibraries.ScriptHelper">
+            <summary>
+            Wrapper class for common framework objects, to be used across the entire test case and dependent libraries
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.ScriptHelper.#ctor(Framework_DataTable.CraftliteDataTable,CRAFTLite.SupportLibraries.SeleniumReport,OpenQA.Selenium.Remote.RemoteWebDriver)">
+            <summary>
+            Constructor to initialize all the objects wrapped by the ScriptHelper class
+            </summary>
+            <param name="dataTable">The CraftDataTable object</param>
+            <param name="report">The SeleniumReport object</param>
+            <param name="driver"></param>
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.ScriptHelper.DataTable">
+            <summary>
+            The DataTable object of the  ScriptHelper class
+            </summary>
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.ScriptHelper.Report">
+            <summary>
+            The SeleniumReport object
+            </summary>
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.ScriptHelper.Driver">
+            <summary>
+            The  WebDriver object
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.PlatformFactory.GetPlatform(System.String)">
+            <summary>
+             Function to return the appropriate Platform object based on the platform name passed
+            </summary>
+            <param name="platformName"> The name of the platform</param>
+            <returns> The corresponding Platform object</returns>
+        </member>
+        <member name="T:CRAFT.Allocator.ParallelRunner">
+            <summary>
+             Class to facilitate parallel execution of test scripts
+            </summary>
+        </member>
+        <member name="M:CRAFT.Allocator.ParallelRunner.#ctor(CRAFTLite.SupportLibraries.TestParameters,CRAFTLite.SupportLibraries.SeleniumReport)">
+            <summary>
+            Constructor to initialize the details of the test case to be executed
+            </summary>
+            <param name="testParameters">The TestParameters object (passed from the Allocator)</param>
+            <param name="report">The SeleniumReport object (passed from the Allocator)</param>
+        </member>
+        <member name="T:CRAFTLite.SupportLibraries.TestParameters">
+            <summary>
+              Class to encapsulate various input parameters required for each test script
+            </summary>
+        </member>
+        <member name="F:CRAFTLite.SupportLibraries.TestParameters._startIteration">
+            <summary>
+             The start iteration
+            </summary>
+            
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.TestParameters.CurrentScenario">
+            <summary>
+            The current test scenario/module
+            </summary>
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.TestParameters.CurrentTestcase">
+            <summary>
+            The current test case
+            </summary>
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.TestParameters.CurrentTestDescription">
+            <summary>
+            The description of the current test case
+            </summary>
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.TestParameters.IterationMode">
+             <summary>
+            The iteration mode
+             </summary> 
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.TestParameters.Browser">
+            <summary>
+             The browser for a specific test
+            </summary>
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.TestParameters.BrowserVersion">
+            <summary>
+             Function to get the browserVersion for a specific test
+            </summary>
+        </member>
+        <member name="P:CRAFTLite.SupportLibraries.TestParameters.Platform">
+            <summary>
+             Function to get the platform for a specific test
+            </summary>
+        </member>
+        <member name="T:CRAFTLite.SupportLibraries.WebDriverFactory">
+            <summary>
+            Factory for creating the Driver object based on the required browser
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.WebDriverFactory.GetDriver(CRAFTLite.SupportLibraries.Browser)">
+            <summary>
+             Function to return the appropriate RemoteWebDriver object based on the Browser passed
+            </summary>
+            <param name="browser">The Browser to be used for the test execution</param>
+            <returns>The RemoteWebDriver object corresponding to the Browser specified</returns>
+        </member>
+        <member name="T:CRAFTLite.SupportLibraries.Browser">
+            <summary>
+            Enumerator to represent different browsers used
+            </summary>
+        </member>
+        <member name="T:CRAFTLite.SupportLibraries.Asserts">
+            <summary>
+            Class to provide common assertions/verifications
+            </summary>
+        </member>
+        <member name="M:CRAFTLite.SupportLibraries.Asserts.IsTextPresent(OpenQA.Selenium.Remote.RemoteWebDriver,System.String)">
+            <summary>
+             Function to verify whether a given text is present within the page
+            </summary>
+            <param name="driver"> The WebDriver object</param>
+            <param name="textToVerify">The text to be verified within the page</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

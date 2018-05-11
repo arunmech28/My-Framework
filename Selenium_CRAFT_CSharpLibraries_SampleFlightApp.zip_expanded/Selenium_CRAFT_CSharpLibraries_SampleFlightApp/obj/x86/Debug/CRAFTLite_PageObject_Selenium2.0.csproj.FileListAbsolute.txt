@@ -1,0 +1,14 @@
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\CRAFTLite_PageObject_Selenium2.0.dll.config
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\CRAFTLite_PageObject_Selenium2.0.xml
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\CRAFTLite_PageObject_Selenium2.0.dll
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\CRAFTLite_PageObject_Selenium2.0.pdb
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\Framework_Core.dll
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\Framework_DataTable.dll
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\Framework_Reporting.dll
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\Framework_Utilities.dll
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\Ionic.Zip.dll
+D:\Selenium_CRAFTLite_PageObject\bin\Debug\NPOI.dll
+D:\Selenium_CRAFTLite_PageObject\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Selenium_CRAFTLite_PageObject\obj\x86\Debug\CRAFTLite_PageObject_Selenium2.0.dll
+D:\Selenium_CRAFTLite_PageObject\obj\x86\Debug\CRAFTLite_PageObject_Selenium2.0.pdb

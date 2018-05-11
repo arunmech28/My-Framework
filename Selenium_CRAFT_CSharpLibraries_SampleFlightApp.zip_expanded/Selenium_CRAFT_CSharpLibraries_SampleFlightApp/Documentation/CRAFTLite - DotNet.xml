@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>CRAFTLite - DotNet</name>
+  </assembly>
+  <members>
+    <member name="T:CRAFTLite_DotNet.Allocator">
+      <summary>
+            Class that encapsulates members and methods for batch execution of the test cases.
+            </summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.Allocator.#ctor">
+      <summary>
+            Default constructor for Allocator class
+            </summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.Allocator.StartExecution">
+      <summary>
+            Start method of the Allocator script
+            </summary>
+    </member>
+    <member name="T:CRAFTLite_DotNet.Initiator">
+      <summary>
+            Class to decide the mode of execution and start the execution process
+            </summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.Initiator.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:CRAFTLite_DotNet.Initiator" /> class</summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.Initiator.Main(System.String[])">
+      <summary>
+            Main method to start the execution of the test cases based in ini settings
+            </summary>
+      <param name="args">Command line arguments</param>
+    </member>
+    <member name="T:CRAFTLite_DotNet.ReusableLibrary">
+      <summary>
+            Class which encapsulates various objects which is used for reuseability
+            </summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.ReusableLibrary.#ctor(CRAFTLite.SupportLibraries.ScriptHelper)">
+      <summary>
+            Constructor to initialize the ScriptHelper object as well as the objects wrapped by the ScriptHelper object
+            </summary>
+      <param name="scriptHelper">The ScriptHelper object</param>
+    </member>
+    <member name="F:CRAFTLite_DotNet.ReusableLibrary.dataTable">
+      <summary>
+            The DataTable object (passed from the main test script)
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.ReusableLibrary.report">
+      <summary>
+            The Report object (passed from the main test script)
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.ReusableLibrary.scriptHelper">
+      <summary>
+            The ScriptHelper object (required for calling one reusable library from another)
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.ReusableLibrary.util">
+      <summary>
+            The Util object (passed from the main test script)
+            </summary>
+    </member>
+    <member name="T:CRAFTLite_DotNet.TestScript">
+      <summary>
+            Abstract base class for test scripts created by the user (Encapsulates the core logic of the CRAFTLite framework) 
+            </summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.TestScript.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+      <summary>
+            Constructor to initialize the test script
+            </summary>
+      <param name="currentScenario">Current Scenario to test</param>
+      <param name="currentTestcase">Current TestCase to test</param>
+      <param name="timeStamp">Folder to store the result in case single testcase execution</param>
+      <param name="iterationMode">Iteration Mode of the testcase</param>
+      <param name="startIteration">Start Iteration of the test case</param>
+      <param name="endIteration">End Iteration of the test case</param>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.currentScenario">
+      <summary>
+            Basic input to the Test script about the test case to be executed
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.currentTestcase">
+      <summary>
+            Basic input to the Test script about the test case to be executed
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.dataTable">
+      <summary>
+            The DataTable object
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.driver">
+      <summary>
+            The Selenium WebDriver object
+            </summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.TestScript.DriveTestExecution">
+      <summary>
+            Function which drives the test case execution (core logic of the framework)
+            </summary>
+      <returns>The Pass/Fail status of the test case executed</returns>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.endIteration">
+      <summary>
+            Basic input to the Test script about the test case to be executed
+            </summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.TestScript.ExecuteTestcase">
+      <summary>
+            Function which implements the test case to be automated
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.iterationMode">
+      <summary>
+            Basic input to the Test script about the test case to be executed
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.report">
+      <summary>
+            The Report object
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.scriptHelper">
+      <summary>
+            The ScriptHelper object
+            </summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.TestScript.SetUp">
+      <summary>
+            Function to do required setup activities before starting the execution
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.startIteration">
+      <summary>
+            Basic input to the Test script about the test case to be executed
+            </summary>
+    </member>
+    <member name="M:CRAFTLite_DotNet.TestScript.TearDown">
+      <summary>
+            Function to do required teardown activities at the end of the execution
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.timeStamp">
+      <summary>
+            Basic input to the Test script about the test case to be executed
+            </summary>
+    </member>
+    <member name="F:CRAFTLite_DotNet.TestScript.util">
+      <summary>
+            The Util object
+            </summary>
+    </member>
+  </members>
+</doc>

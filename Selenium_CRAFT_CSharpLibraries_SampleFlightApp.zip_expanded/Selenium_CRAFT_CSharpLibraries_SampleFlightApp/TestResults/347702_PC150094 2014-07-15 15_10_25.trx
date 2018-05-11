@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="0e111673-8c6d-4a36-85ee-3b1490f1f6ec" name="347702@PC150094 2014-07-15 15:10:25" runUser="CTS\347702" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="805b7e0a-f852-4e0a-852c-4cd9f4e1d54e">
+    <Deployment userDeploymentRoot="D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="347702_PC150094 2014-07-15 15_10_25">
+      <DeploymentItem filename="D:\Selenium_CRAFTLite_CSharpLibraries_SampleFlightApp\bin\Debug\Framework_Reporting.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\bin\Debug\NPOI.dll" />
+      <DeploymentItem filename="C:\Users\347702\Desktop\Downloads\selenium-dotnet-2.37.0\net40\Selenium.WebDriverBackedSelenium.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFTLite_CSharpLibraries_SampleFlightApp\bin\Debug\Framework_DataTable.dll" />
+      <DeploymentItem filename="C:\Users\347702\Desktop\Downloads\selenium-dotnet-2.37.0\net40\WebDriver.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\bin\Debug\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\347702\Desktop\Downloads\selenium-dotnet-2.37.0\net40\ThoughtWorks.Selenium.Core.dll" />
+      <DeploymentItem filename="C:\Users\347702\Desktop\Downloads\selenium-dotnet-2.37.0\net40\WebDriver.Support.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFTLite_CSharpLibraries_SampleFlightApp\bin\Debug\Framework_Utilities.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFTLite_CSharpLibraries_SampleFlightApp\bin\Debug\Framework_Core.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\bin\Debug\Ionic.Zip.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-07-15T15:10:25.1366404+05:30" queuing="2014-07-15T15:10:25.4306572+05:30" start="2014-07-15T15:10:25.4436579+05:30" finish="2014-07-15T15:11:29.6423299+05:30" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="StartBatchExecution" storage="d:\selenium_craft_csharplibraries_sampleflightapp\bin\debug\craft_selenium2.0.dll" id="ecc6d0a2-1950-90fa-491f-df6be0acf6f2">
+      <Execution id="f3867151-c82a-4663-99af-bcec6539a6e1" />
+      <TestMethod codeBase="D:/Selenium_CRAFT_CSharpLibraries_SampleFlightApp/bin/Debug/CRAFT_Selenium2.0.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CRAFT.Allocator.Allocator, CRAFT_Selenium2.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="StartBatchExecution" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ecc6d0a2-1950-90fa-491f-df6be0acf6f2" executionId="f3867151-c82a-4663-99af-bcec6539a6e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="f3867151-c82a-4663-99af-bcec6539a6e1" testId="ecc6d0a2-1950-90fa-491f-df6be0acf6f2" testName="StartBatchExecution" computerName="PC150094" duration="00:01:03.5714474" startTime="2014-07-15T15:10:25.4856603+05:30" endTime="2014-07-15T15:11:29.3673141+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3867151-c82a-4663-99af-bcec6539a6e1">
+    </UnitTestResult>
+  </Results>
+</TestRun>

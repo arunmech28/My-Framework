@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2ead1b94-eb4c-442e-ad02-5ce248477383" name="347702@PC150094 2014-07-15 15:30:57" runUser="CTS\347702" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="fbaa4be2-0be6-43e7-9115-9edec72b21be">
+    <Deployment userDeploymentRoot="D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="347702_PC150094 2014-07-15 15_30_57">
+      <DeploymentItem filename="D:\Selenium_CRAFTLite_CSharpLibraries_SampleFlightApp\bin\Debug\Framework_Reporting.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\bin\Debug\NPOI.dll" />
+      <DeploymentItem filename="C:\Users\347702\Desktop\Downloads\selenium-dotnet-2.37.0\net40\Selenium.WebDriverBackedSelenium.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFTLite_CSharpLibraries_SampleFlightApp\bin\Debug\Framework_DataTable.dll" />
+      <DeploymentItem filename="C:\Users\347702\Desktop\Downloads\selenium-dotnet-2.37.0\net40\WebDriver.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\bin\Debug\ICSharpCode.SharpZipLib.dll" />
+      <DeploymentItem filename="C:\Users\347702\Desktop\Downloads\selenium-dotnet-2.37.0\net40\ThoughtWorks.Selenium.Core.dll" />
+      <DeploymentItem filename="C:\Users\347702\Desktop\Downloads\selenium-dotnet-2.37.0\net40\WebDriver.Support.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFTLite_CSharpLibraries_SampleFlightApp\bin\Debug\Framework_Utilities.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFTLite_CSharpLibraries_SampleFlightApp\bin\Debug\Framework_Core.dll" />
+      <DeploymentItem filename="D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\bin\Debug\Ionic.Zip.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-07-15T15:30:57.9911556+05:30" queuing="2014-07-15T15:30:59.8852639+05:30" start="2014-07-15T15:31:00.0862754+05:30" finish="2014-07-15T15:32:41.8090936+05:30" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="StartBatchExecution" storage="d:\selenium_craft_csharplibraries_sampleflightapp\bin\debug\craft_selenium2.0.dll" id="ecc6d0a2-1950-90fa-491f-df6be0acf6f2">
+      <Execution id="a957a32d-6ddf-4e27-97f9-c8f28c0287d2" />
+      <TestMethod codeBase="D:/Selenium_CRAFT_CSharpLibraries_SampleFlightApp/bin/Debug/CRAFT_Selenium2.0.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="CRAFT.Allocator.Allocator, CRAFT_Selenium2.0, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="StartBatchExecution" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="ecc6d0a2-1950-90fa-491f-df6be0acf6f2" executionId="a957a32d-6ddf-4e27-97f9-c8f28c0287d2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a957a32d-6ddf-4e27-97f9-c8f28c0287d2" testId="ecc6d0a2-1950-90fa-491f-df6be0acf6f2" testName="StartBatchExecution" computerName="PC150094" duration="00:01:39.3195118" startTime="2014-07-15T15:31:00.3442902+05:30" endTime="2014-07-15T15:32:41.3020646+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a957a32d-6ddf-4e27-97f9-c8f28c0287d2">
+      <Output>
+        <StdOut>at System.RuntimeMethodHandle._InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, SignatureStruct&amp; sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.RuntimeMethodHandle.InvokeMethodFast(IRuntimeMethodInfo method, Object target, Object[] arguments, Signature sig, MethodAttributes methodAttributes, RuntimeType typeOwner)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture, Boolean skipVisibilityChecks)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at CRAFT.SupportLibraries.DriverScript.InvokeBusinessComponent(String currentKeyword) in D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\SupportLibraries\DriverScript.cs:line 431
+   at CRAFT.SupportLibraries.DriverScript.ExecuteTestcase(List`1 businessFlowData) in D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\SupportLibraries\DriverScript.cs:line 399
+   at CRAFT.SupportLibraries.DriverScript.ExecuteTestIterations() in D:\Selenium_CRAFT_CSharpLibraries_SampleFlightApp\SupportLibraries\DriverScript.cs:line 340</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

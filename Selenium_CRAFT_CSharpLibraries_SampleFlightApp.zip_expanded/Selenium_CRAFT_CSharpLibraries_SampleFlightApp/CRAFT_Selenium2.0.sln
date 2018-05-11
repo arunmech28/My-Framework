@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRAFT_Selenium2.0", "CRAFT_Selenium2.0.csproj", "{FC9B476E-D17A-4190-A575-5ADDA2280382}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC9B476E-D17A-4190-A575-5ADDA2280382}.Debug|x86.ActiveCfg = Debug|x86
+		{FC9B476E-D17A-4190-A575-5ADDA2280382}.Debug|x86.Build.0 = Debug|x86
+		{FC9B476E-D17A-4190-A575-5ADDA2280382}.Release|x86.ActiveCfg = Release|x86
+		{FC9B476E-D17A-4190-A575-5ADDA2280382}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
