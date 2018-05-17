@@ -24,7 +24,7 @@ import Framework.Utilities.JsonUtil;
 public class AutomationTestSuite extends TestBaseWebAutomation{
 
 
-	@Test(dataProvider = "test_Data",enabled=false)
+	@Test(dataProvider = "test_Data",enabled=true)
 	public void Test_Case_1(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException, FileNotFoundException, IOException, ParseException {
 		
 		startExecution(args);

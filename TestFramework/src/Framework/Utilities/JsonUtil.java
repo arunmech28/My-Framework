@@ -22,7 +22,8 @@ public class JsonUtil extends TestBaseWebAutomation{
 		Parameters params = Parameters.getInstance();
 		JSONParser parser = new JSONParser();
 		
-		 JSONArray a = (JSONArray) parser.parse(new FileReader(params.getProperties().getProperty("TestDataPath")+folderName+"\\"+fileName+".json"));
+		 JSONArray a = (JSONArray) parser.parse(new FileReader(params.getProperties().getProperty("TestDataPath")
+				 +folderName+"\\"+fileName+".json"));
 
 		 JSONObject object = (JSONObject) a.get(0);
 		 Set<?> keyindex = object.keySet();

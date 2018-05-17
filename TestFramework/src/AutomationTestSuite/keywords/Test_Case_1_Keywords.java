@@ -28,8 +28,8 @@ public class Test_Case_1_Keywords extends ReusableLibrary implements TestCaseRun
 		
 		justTest("LoginPage.username");
 		loadurl("https://spstest.mckesson.com/MTpharma-HCP/");
-		newTest("LoginPage.username");
-		//enterTxt(LoginPage.username, "username");
+		//newTest("LoginPage.username1");
+		enterTxt(LoginPage.username, "username1");
 		enterTxt(LoginPage.password, "password");
 		click(LoginPage.signin);
 		

@@ -91,6 +91,10 @@ public class ReusableLibrary  {
 	}
 	
 	public String getValue(String key) {
+		
+		if(!testdata.containsKey(key)) {
+			throw new FrameworkException("No data found in Input TestData");
+		}
 		return testdata.get(key);
 	}
 	public void click(By by) {
