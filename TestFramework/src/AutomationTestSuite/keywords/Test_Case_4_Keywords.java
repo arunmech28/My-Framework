@@ -15,9 +15,11 @@ import Framework.Utilities.ReusableLibrary;
 
 
 
-public class Test_Case_1_Keywords extends ReusableLibrary implements TestCaseRun {
+public class Test_Case_4_Keywords extends ReusableLibrary implements TestCaseRun {
+
 	Parameters par;
-	public Test_Case_1_Keywords(Parameters params, Map<String, String> testdata) {
+	
+	public Test_Case_4_Keywords(Parameters params, Map<String, String> testdata) {
 		super(params, testdata);
 		par=params;
 		// TODO Auto-generated constructor stub
@@ -26,7 +28,7 @@ public class Test_Case_1_Keywords extends ReusableLibrary implements TestCaseRun
 	@Override
 	public void run() throws AWTException {
 		//Login
-		System.out.println("test case 1 with "+par.getCurrentTestCase());
+		System.out.println("test case 4 with "+par.getCurrentTestCase());
 		//justTest("LoginPage.username");
 		loadurl("https://spstest.mckesson.com/MTpharma-HCP/");
 		//newTest("LoginPage.username1");

@@ -4,12 +4,15 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.config.RequestConfig;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.openqa.selenium.WebDriver;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
-public class Parameters {
+public class WebServiceParameters {
 
 	private Map<String,ExtentTest> loggermap;
 	
@@ -20,15 +23,26 @@ public class Parameters {
 	public void setLoggermap(Map<String, ExtentTest> loggermap) {
 		this.loggermap = loggermap;
 	}
-
-	private Map<String,WebDriver> drivermap;
 	
-	public Map<String, WebDriver> getDrivermap() {
-		return drivermap;
+	private RequestConfig requestconfig;
+
+	public RequestConfig getRequestconfig() {
+		return requestconfig;
 	}
 
-	public void setDrivermap(Map<String, WebDriver> drivermap) {
-		this.drivermap = drivermap;
+	public void setRequestconfig(RequestConfig requestconfig) {
+		this.requestconfig = requestconfig;
+	}
+
+	private Map<String,CloseableHttpClient> httpclientmap;
+	
+	
+	public Map<String, CloseableHttpClient> getHttpclientmap() {
+		return httpclientmap;
+	}
+
+	public void setHttpclientmap(Map<String, CloseableHttpClient> httpclientmap) {
+		this.httpclientmap = httpclientmap;
 	}
 
 	private ExtentTest logger;
@@ -92,25 +106,16 @@ public class Parameters {
 		this.prop = prop;
 	}
 
-	private WebDriver driver;
+	
+	private static final WebServiceParameters webserviceparameters = new WebServiceParameters();
 
-	public WebDriver getDriver() {
-		return driver;
-	}
-
-	public void setDriver(WebDriver driver) {
-		this.driver = driver;
-	}
-
-	private static final Parameters parameters = new Parameters();
-
-	private Parameters()
+	private WebServiceParameters()
 	{
 		// To prevent external instantiation of this class
 	}
 
-	public static Parameters getInstance()
+	public static WebServiceParameters getInstance()
 	{
-		return parameters;
+		return webserviceparameters;
 	}
 }

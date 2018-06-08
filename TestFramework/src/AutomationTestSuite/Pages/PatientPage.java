@@ -34,9 +34,9 @@ public class PatientPage {
 	public static By afternoon = By.xpath("//label[text()=' Afternoon']/preceding-sibling::input");
 	public static By evening = By.xpath("//label[text()=' Evening']/preceding-sibling::input");
 
-	public static By next = By.xpath("//a[@id='j_idt103']");	
+	public static By next = By.xpath("//a[@id='j_idt237']");	
 
-	public static By popupCancel = By.xpath("//button[@id='j_idt112']");
+	public static By popupCancel = By.xpath("//button[@id='j_idt246']");
 
 
 	//Insurance information
@@ -54,8 +54,8 @@ public class PatientPage {
 	public static By groupNumber = By.xpath("//input[@id='primGroupNumber']");
 
 
-	public static By insuranceInfo_next = By.xpath("//a[@id='j_idt159']");
-	public static By patientFinancialInfo_next = By.xpath("//a[@id='j_idt184']");
+	public static By insuranceInfo_next = By.xpath("//a[@id='j_idt293']");
+	public static By patientFinancialInfo_next = By.xpath("//a[@id='j_idt318']");
 
 	//Prescriber information
 	public static By practiceLocation = By.xpath("//select[@id='PracticeLocation']");
@@ -66,7 +66,7 @@ public class PatientPage {
 	public static By hcpFax = By.xpath("//input[@id='hcpDetails:j_idt404:0:j_idt407:0']");
 	public static By hcp_next = By.xpath("//a[@id='hcpDetails:j_idt413']");
 	public static By officeContactName = By.xpath("//select[@id='physicianOfficeContactPerson']");
-	public static By prescriberInfo_next = By.xpath("//a[@id='j_idt237']");
+	public static By prescriberInfo_next = By.xpath("//a[@id='j_idt371']");
 
 	//Prescription information
 	public static By starterDose = By.xpath("//input[@id='j_idt277:0']");

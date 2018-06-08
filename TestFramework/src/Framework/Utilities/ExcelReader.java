@@ -10,7 +10,7 @@ import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelUtility {
+public class ExcelReader {
 
 	public File file;
 	public FileInputStream fin;
@@ -20,12 +20,23 @@ public class ExcelUtility {
 	public XSSFCell cell;
 	
 
-	public ExcelUtility(String filepath) throws IOException {
+	public ExcelReader(String filepath) throws IOException {
 		file = new File(filepath);
 		fin  = new FileInputStream(file);
 		workbook = new XSSFWorkbook(fin);
 		sheet = workbook.getSheet("Sheet1");
 
+	}
+	
+	
+	public int getNoOfRows() {
+		
+		return sheet.getLastRowNum()+1;
+	}
+	
+	public int getNoOfCols() {
+		
+		return sheet.getRow(0).getLastCellNum();
 	}
 
 	@SuppressWarnings("deprecation")

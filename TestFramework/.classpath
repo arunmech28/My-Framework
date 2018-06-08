@@ -25,5 +25,9 @@
 	<classpathentry kind="lib" path="D:/Arun/myfolder/seleniumjars/poi-3.17/lib/commons-collections4-4.1.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/538768/Downloads/json_new.jar"/>
+	<classpathentry kind="lib" path="D:/Arun/myfolder/seleniumjars/report/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="D:/Arun/myfolder/seleniumjars/report/freemarker-2.3.26-incubating.jar"/>
+	<classpathentry kind="lib" path="D:/Arun/myfolder/seleniumjars/javax.mail-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Arun/myfolder/seleniumjars/javax.mail-1.6.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

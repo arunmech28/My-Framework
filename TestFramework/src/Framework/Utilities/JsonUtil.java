@@ -17,13 +17,19 @@ import Framework.Handler.TestBaseWebAutomation;
 
 public class JsonUtil extends TestBaseWebAutomation{
 	
-	public static Object[][] getTestData(String fileName,String folderName) throws FileNotFoundException, IOException, ParseException{
+	public static Object[][] getTestData(String fileName,String folderName){
 		
 		Parameters params = Parameters.getInstance();
 		JSONParser parser = new JSONParser();
 		
-		 JSONArray a = (JSONArray) parser.parse(new FileReader(params.getProperties().getProperty("TestDataPath")
-				 +folderName+"\\"+fileName+".json"));
+		 JSONArray a = null;
+		try {
+			a = (JSONArray) parser.parse(new FileReader(params.getProperties().getProperty("TestDataPath")
+					 +folderName+"\\"+fileName+".json"));
+		} catch (IOException | ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		 JSONObject object = (JSONObject) a.get(0);
 		 Set<?> keyindex = object.keySet();

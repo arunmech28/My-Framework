@@ -5,9 +5,10 @@
   <listener class-name="Framework.Handler.AnnotationTransformer"></listener>
   </listeners>
    -->
-  <test name="Test">
-    <classes>
+  <test name="MTPharma">
+      <classes>
       <class name="Application.Suite.AutomationTestSuite"/>
-    </classes>
+      </classes>
   </test> <!-- Test -->
+  
 </suite> <!-- Suite -->

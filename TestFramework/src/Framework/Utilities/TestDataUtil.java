@@ -14,6 +14,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.poi.util.IOUtils;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
 
 public class TestDataUtil {
 
@@ -50,6 +52,11 @@ public class TestDataUtil {
 
 			  instream.close();
 
+			  Object obj=JSONValue.parse(res);  
+			    JSONObject jsonObject = (JSONObject) obj;  
+			  
+			    String name = (String) jsonObject.get("Temperature"); 
+			  System.out.println(name);
 			  System.out.println(res);
 			}
 		} catch (IOException e) {
