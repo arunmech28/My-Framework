@@ -16,6 +16,7 @@ import org.json.simple.parser.ParseException;
 import Framework.Handler.Parameters;
 import Framework.Utilities.JsonUtil;
 
+@Deprecated
 public class JsonRunner {
 
 	private Parameters parameters;

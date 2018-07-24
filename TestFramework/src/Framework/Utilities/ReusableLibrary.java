@@ -1,5 +1,6 @@
 package Framework.Utilities;
 
+import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Map;
 import org.openqa.selenium.By;
@@ -9,7 +10,6 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -19,33 +19,42 @@ import Framework.Handler.Parameters;
 public class ReusableLibrary  {
 
 	protected WebDriver driver; 
-	protected Map<String,String> testdata; 
+	protected Map<String,String> testdata;
+	protected Parameters params;
 
 	public ReusableLibrary(Parameters params,Map<String,String> testdata) {
 		//this.driver = params.getDriver();
 		Map<String,WebDriver> drivermap = params.getDrivermap();
 		this.driver = drivermap.get(params.getCurrentTestCase());
 		this.testdata = testdata;
-		
+		this.params = params;
 	}
 
 	public void scroll() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		
-		
-			js.executeScript("scroll(0, 250);");
-		
+
+
+		js.executeScript("scroll(0, 250);");
+
 	}
-	
+
 
 	public String getValue(String key) {
-		
+
 		if(!testdata.containsKey(key)) {
 			throw new FrameworkException("No data found in Input JSON");
 		}
 		return testdata.get(key);
 	}
+	public void click(String value) {
+		By byval = getByValue(value);
+		waitUntilElementEnabled(byval,30);
+		driver.findElement(byval).click();
+		waitFor(1000);
+	}
+	
 	public void click(By by) {
+		
 		waitUntilElementEnabled(by,30);
 		driver.findElement(by).click();
 		waitFor(1000);
@@ -56,37 +65,70 @@ public class ReusableLibrary  {
 		driver.manage().window().maximize();
 
 	}
-	
-	public void enterDOB(By by, String value) {
-		waitUntilElementEnabled(by,20);
-		driver.findElement(by).click();
-		driver.findElement(by).clear();
+
+	public void enterDOB(String value) {
+		By byval = getByValue(value);
+		String data_key = getData(value);
+		waitUntilElementEnabled(byval, 20);
+		driver.findElement(byval).click();
+		driver.findElement(byval).clear();
 		waitFor(2000);
-		driver.findElement(by).sendKeys(getValue(value));
-		driver.findElement(by).sendKeys(Keys.TAB);
-		
-		waitFor(1000);
-	}
-	
-	public void enterTxt(By by,String val) {
-		waitUntilElementEnabled(by,30);
-		driver.findElement(by).clear();
-		driver.findElement(by).sendKeys(getValue(val));
+		driver.findElement(byval).sendKeys(getValue(data_key));
+		driver.findElement(byval).sendKeys(Keys.TAB);
+
 		waitFor(1000);
 	}
 
-	public void selectDropdown(By by, String value) {
+	public void enterTxt(String value) {
+
+		By byval = getByValue(value);
+		String data_key = getData(value);
+
+		waitUntilElementEnabled(byval,30);
+		driver.findElement(byval).clear();
+		driver.findElement(byval).sendKeys(getValue(data_key));
+		waitFor(1000);
+	}
+
+
+	public By getByValue(String value) {
+		String[] val1 = value.split("\\.");
+		Class<?> myClass = null;
+		Field myField =null;
+		By byval = null;
+		try{
+			myClass = Class.forName(params.getCurrentTestSuite()+".Pages."+val1[0]);
+			myField = myClass.getDeclaredField(val1[1]);
+			byval = (By) myField.get(null);
+		}
+		catch(ClassNotFoundException | NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
+			throw new FrameworkException("Problem in getting the xpath from the Pages");
+		}
+
+
+		return byval;
+	}
+
+	public String getData(String value) {
+		String[] val1 = value.split("\\.");
+
+		return val1[1];
+	}
+
+	public void selectDropdown(String value) {
+		By byval = getByValue(value);
+		String data_key = getData(value);
 		waitFor(5000);
-		
-		Select select = new Select(driver.findElement(by));
-		
+
+		Select select = new Select(driver.findElement(byval));
+
 		List<WebElement> options = select.getOptions();
 		while(options.size()==0) {
-			waitFor(2000);
+			waitFor(4000);
 		}
-		select.selectByVisibleText(getValue(value));
+		select.selectByVisibleText(getValue(data_key));
 		waitFor(1000);
-		
+
 	}
 
 	public Boolean objectExists(By by) {
@@ -127,7 +169,7 @@ public class ReusableLibrary  {
 	public void waitUntilElementLocated(By by, long timeOutInSeconds) {
 		(new WebDriverWait(driver, timeOutInSeconds))
 		.until(ExpectedConditions.presenceOfElementLocated(by));
-		
+
 	}
 
 	public void waitUntilElementVisible(By by, long timeOutInSeconds) {
@@ -144,65 +186,13 @@ public class ReusableLibrary  {
 		(new WebDriverWait(driver, timeOutInSeconds))
 		.until(ExpectedConditions.not(ExpectedConditions.elementToBeClickable(by)));
 	}
-	
-	
+
+
 	public void testing() {
 		new WebDriverWait(driver,30).until(ExpectedConditions.elementToBeClickable(By.id("123"))
 				);
 	}
 
-	/*public void newTest(String val) {
-		
-		String[] val1 = val.split("\\.");
-		Class myClass = null;
-		 Field myField =null;
-		 By byval = null;
-		try{
-			myClass = Class.forName(params.getCurrentTestSuite()+".Pages."+val1[0]);
-			myField = myClass.getDeclaredField(val1[1]);
-			byval = (By) myField.get(null);
-		}
-		catch(ClassNotFoundException | NoSuchFieldException | SecurityException | IllegalArgumentException | IllegalAccessException e) {
-			
-		}
-		
-		
-		driver.findElement(byval).sendKeys(getValue(val1[1]));
-	}
 	
-	public void justTest(String val) {
-		
-		String[] val1 = val.split("\\.");
-		System.out.println(val+"count"+val1.length);
-		 Class myClass = null;
-		
-		try {
-			myClass = Class.forName(params.getCurrentTestSuite()+".Pages."+val1[0]);
-			
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		Field myField =null;
-		    try {
-				myField = myClass.getDeclaredField(val1[1]);
-			} catch (NoSuchFieldException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (SecurityException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		    
-		    try {
-		    	By byval = (By) myField.get(null);
-				System.out.println(byval);
-			} catch (IllegalArgumentException | IllegalAccessException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		//driver.findElement(By.id("id")).click();
-	}*/
-	
+
 }

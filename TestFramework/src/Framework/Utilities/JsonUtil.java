@@ -3,14 +3,13 @@ package Framework.Utilities;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
-
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 import Framework.Handler.Parameters;
 import Framework.Handler.TestBaseWebAutomation;
 
@@ -68,6 +67,47 @@ public class JsonUtil extends TestBaseWebAutomation{
 		
 		return keyindex;
 		
+	}
+
+	public static Object[][] getTestDataJSON(String testcasename, String foldername) {
+		Parameters params = Parameters.getInstance();
+		JSONParser parser = new JSONParser();
+
+		
+		
+		
+		 JSONArray a = null;
+		try {
+			a = (JSONArray) parser.parse(new FileReader(System.getProperty("user.dir")+"\\"
+					 +foldername+"\\"+testcasename+".json"));
+		} catch (IOException | ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Object[][] testdata = new Object[a.size()][1];
+		for(int i=0;i<a.size();i++) {
+			
+			JSONObject obj = (JSONObject) a.get(i);
+			 
+			 Set<?> keys = obj.keySet();
+			 params.setKeys(keys);
+			 Iterator<?> itr = keys.iterator();
+			 HashMap<String,String> map = new HashMap<String,String>();
+			 
+			 while(itr.hasNext()) {
+				 
+				 String key = (String) itr.next();
+				 map.put(key, (String) obj.get(key));
+				 
+			 }
+			
+			 testdata[i][0] = map;
+			
+		}
+			
+		
+				
+		return testdata;
 	}
 }
 	

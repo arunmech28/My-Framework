@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]" parallel="methods" data-provider-thread-count="5">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Suite]" parallel="methods">
   <test name="MTPharma(failed)" parallel="methods">
     <classes>
       <class name="Application.Suite.AutomationTestSuite">
         <methods>
           <include name="driverstartup"/>
-          <include name="Test_Case_chrome" invocation-numbers="0"/>
+          <include name="Test_AngularJs"/>
           <include name="setup"/>
           <include name="reportsetup"/>
           <include name="endReport"/>

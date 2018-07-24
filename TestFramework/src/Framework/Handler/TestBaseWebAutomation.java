@@ -39,9 +39,6 @@ public abstract class TestBaseWebAutomation {
 		parameters.setLoggermap(new HashMap<String,ExtentTest>());
 	}
 
-
-
-
 	@BeforeTest
 	public void reportsetup() {
 		Parameters parameters = Parameters.getInstance();
@@ -63,12 +60,12 @@ public abstract class TestBaseWebAutomation {
 		Constructor<?> ctor = c.getConstructor();
 		Object object = ctor.newInstance();
 	
-		Method mem = object.getClass().getMethod(m.getName(), java.lang.String[].class);
+		//Method mem = object.getClass().getMethod(m.getName(), java.lang.String[].class);
+		Method mem = object.getClass().getMethod(m.getName(),null); //java.util.HashMap.class);
+		if(mem.isAnnotationPresent(BrowserAnnotation.class)) {
 
-		if(mem.isAnnotationPresent(ParameterAnnotation.class)) {
 
-
-			ParameterAnnotation anno=mem.getAnnotation(ParameterAnnotation.class);
+			BrowserAnnotation anno=mem.getAnnotation(BrowserAnnotation.class);
 			System.out.println("browser is "+anno.browser());
 
 
@@ -166,11 +163,13 @@ public abstract class TestBaseWebAutomation {
 
 	}
 
+	@Deprecated
 	public void runWithJson(String[] args,Parameters params){
 		JsonRunner runner = new JsonRunner(params);
 		runner.execute(args);
 	}
 	
+	@Deprecated
 	public void runWithExcel(String[] args,Parameters params) {
 		ExcelRunner runner = new ExcelRunner(params);
 		runner.execute(args);
@@ -180,5 +179,12 @@ public abstract class TestBaseWebAutomation {
 		Runner runner = new Runner(params);
 		runner.execute();
 	}*/
+	
+	public void run(HashMap<String,String> data,Parameters params) {
+		
+		
+		Runner runner = new Runner(params);
+		runner.execute(data);
+	}
 
 }

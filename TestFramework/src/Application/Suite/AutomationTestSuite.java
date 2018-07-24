@@ -3,74 +3,96 @@ package Application.Suite;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-
+import java.util.HashMap;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import mytest.selenium.*;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import Framework.Handler.ParameterAnnotation;
+import Framework.Handler.BrowserAnnotation;
 import Framework.Handler.TestBaseWebAutomation;
 import Framework.Utilities.ExcelUtil;
 import Framework.Utilities.JsonUtil;
 
 
 public class AutomationTestSuite extends TestBaseWebAutomation{
-
-
-	@ParameterAnnotation(browser="FIREFOX")
-	@Test(dataProvider = "test_Data",enabled=false)
-	public void Test_Case_1(String[] args){
+	
+	@BrowserAnnotation(browser="CHROME")
+	@Test()
+	public void Test_AngularJs(){
+		
+		WebDriver driver = parameters.getDrivermap().get(new Exception().getStackTrace()[0].getMethodName());
+		driver.get("https://angularjs.org/");
+		//driver.findElement(TestBy.ngmodel("yourName")).sendKeys("Arun");
+		
+		driver.findElement(By.ngmodel("yourName")).sendKeys("Arun");
+		driver.findElement(By.ngclick("plnkr.open($event)")).click();
+				
+	}
+	
+	
+	@BrowserAnnotation(browser="CHROME")
+	@Test(dataProvider = "test_Data_Json",enabled=false)
+	public void Test_Case_JsonMap(HashMap<String,String> args){
 		
 		parameters.setCurrentTestCase(new Exception().getStackTrace()[0].getMethodName());
-		System.out.println("test 1 passed");
-		parameters.getDriver().get("http://newtours.demoaut.com/");
-		runWithJson(args,parameters);
+		
+		System.out.println(args);
+		run(args,parameters);
+		
+	}
+
+	@BrowserAnnotation(browser="CHROME")
+	@Test(dataProvider = "test_Data_Json",enabled=false)
+	public void Test_Case_1(HashMap<String,String> args){
+		
+		parameters.setCurrentTestCase(new Exception().getStackTrace()[0].getMethodName());
+		run(args,parameters);
 			
 	}
 	
-	@ParameterAnnotation
-	@Test(dataProvider = "test_Data",enabled=false)
-	public void Test_Case_4(String[] args){
+	@BrowserAnnotation
+	@Test(dataProvider = "test_Data_Json",enabled=false)
+	public void Test_Case_4(HashMap<String,String> args){
 		
 		parameters.setCurrentTestCase(new Exception().getStackTrace()[0].getMethodName());
 		System.out.println("test 2 passed");
-		parameters.getDriver().get("https://www.google.co.in/");
+		
 		//System.out.println(parameters.getCurrentTestCase());
-		runWithJson(args,parameters);
+		//run(args,parameters);
 			
 	}
 
 	
 
-	@ParameterAnnotation(browser="FIREFOX")
-	@Test(dataProvider = "test_Data",enabled=true)
-	public void Test_Case_firefox(String[] args){
+	@BrowserAnnotation(browser="FIREFOX")
+	@Test(dataProvider = "test_Data_Json",enabled=false)
+	public void Test_Case_firefox(HashMap<String,String> args){
 		
 		parameters.setCurrentTestCase(new Exception().getStackTrace()[0].getMethodName());
 		//System.out.println("test 1 passed");
 		//parameters.getDriver().get("http://newtours.demoaut.com/");
-		runWithJson(args,parameters);
+		//run(args,parameters);
 			
 	}
 	
-	@ParameterAnnotation
-	@Test(dataProvider = "test_Data_excel",enabled=true)
-	public void Test_Case_chrome(String[] args) {
+	@BrowserAnnotation
+	@Test(dataProvider = "test_Data_excel",enabled=false)
+	public void Test_Case_chrome(HashMap<String,String> args) {
 		
 		parameters.setCurrentTestCase(new Exception().getStackTrace()[0].getMethodName());
-		System.out.println(Arrays.toString(args));
+		System.out.println(args);
 		//System.out.println("test 2 passed");
 		//parameters.getDriver().get("https://www.google.co.in/");
 		//System.out.println(parameters.getCurrentTestCase());
-		runWithExcel(args,parameters);
+		//run(args,parameters);
 			
 	}
 
 	
-	@Test(dataProvider = "test_Data",enabled=false)
+	@Test(dataProvider = "test_Data_Json",enabled=false)
 	public void Test_Case_2()  {
 		parameters.setCurrentTestCase(new Exception().getStackTrace()[0].getMethodName());
 		//startExecution(parameters);
@@ -110,7 +132,15 @@ public class AutomationTestSuite extends TestBaseWebAutomation{
 	@DataProvider
 	public Object[][] test_Data_excel(Method m){
 
-		return ExcelUtil.getTestData(m.getName(),this.getClass().getSimpleName());
+		return ExcelUtil.getTestDataExcel(m.getName(),this.getClass().getSimpleName());
+
+	}
+	
+
+	@DataProvider
+	public Object[][] test_Data_Json(Method m){
+
+		return JsonUtil.getTestDataJSON(m.getName(),this.getClass().getSimpleName());
 
 	}
 

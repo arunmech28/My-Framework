@@ -29,5 +29,6 @@
 	<classpathentry kind="lib" path="D:/Arun/myfolder/seleniumjars/report/freemarker-2.3.26-incubating.jar"/>
 	<classpathentry kind="lib" path="D:/Arun/myfolder/seleniumjars/javax.mail-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="D:/Arun/myfolder/seleniumjars/javax.mail-1.6.1.jar"/>
+	<classpathentry kind="lib" path="D:/Arun/myfolder/seleniumjars/json-20180130.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

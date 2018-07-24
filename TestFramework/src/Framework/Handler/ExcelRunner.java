@@ -14,7 +14,7 @@ import org.json.simple.parser.ParseException;
 import Framework.Handler.Parameters;
 import Framework.Utilities.ExcelUtil;
 
-
+@Deprecated
 public class ExcelRunner {
 
 	private Parameters parameters;

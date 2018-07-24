@@ -13,6 +13,7 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 import org.apache.poi.util.IOUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
@@ -36,6 +37,10 @@ public class TestDataUtil {
 		try {
 			response = httpclient.execute(httpget);
 			
+			String responseString = EntityUtils.toString(response.getEntity(),"UTF-8");
+			
+			JSONObject obj = new JSONObject();
+			
 			HttpEntity entity = response.getEntity();
 			String responseval = entity.toString();
 			StringBuilder resString = new StringBuilder(responseval);
@@ -52,8 +57,8 @@ public class TestDataUtil {
 
 			  instream.close();
 
-			  Object obj=JSONValue.parse(res);  
-			    JSONObject jsonObject = (JSONObject) obj;  
+			  Object obj1=JSONValue.parse(res);  
+			    JSONObject jsonObject = (JSONObject) obj1;  
 			  
 			    String name = (String) jsonObject.get("Temperature"); 
 			  System.out.println(name);

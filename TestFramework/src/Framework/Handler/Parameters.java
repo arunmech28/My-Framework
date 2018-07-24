@@ -32,8 +32,7 @@ public class Parameters {
 	}
 
 	private ExtentTest logger;
-	
-	
+
 	public ExtentTest getLogger() {
 		return logger;
 	}
@@ -92,16 +91,7 @@ public class Parameters {
 		this.prop = prop;
 	}
 
-	private WebDriver driver;
-
-	public WebDriver getDriver() {
-		return driver;
-	}
-
-	public void setDriver(WebDriver driver) {
-		this.driver = driver;
-	}
-
+	
 	private static final Parameters parameters = new Parameters();
 
 	private Parameters()
